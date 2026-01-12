@@ -94,5 +94,17 @@ impl Caloric for Dressing {
 
 #[cfg (test)]
 mod tests{
-    
+    use super::*;
+    use pretty_assertions::assert_eq;
+    use rstest::{fixture, rstest};
+    #[rstest]
+    fn f(){
+        fn  salad_contains_protein_vegetables_and_dressing(){
+            let salad = Salad::new(
+                Protein::Steak,
+                vec![Vegetable::SweetPotato, 
+                Vegetable::Tomato],Dressing::Italian
+            );
+        }
+    }
 }
